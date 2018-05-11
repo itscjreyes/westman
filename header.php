@@ -14,17 +14,44 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+	<div class="topBar">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span4 socialLinks">
+					<a href="https://www.facebook.com/Westman-Editorial-195926647158139"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/WestmanEdit"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.linkedin.com/company/westman-editorial"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<div class="span8">
+					<a href="tel:6479668463" class="contactPhone"><i class="fa fa-phone"></i>647.966.8463</a>
+				</div>
+			</div> <!-- .row-fluid -->
+		</div> <!-- .container -->
+	</div> <!-- .topBar -->
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
-
+	<div class="mainNav">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span3">
+					<a href="/"><img src="https://www.westmaneditorial.com/hubfs/Logo/WestmanLogo.png?t=1525970425256" alt="Logo" class="logo"></a>
+				</div>
+				<div class="span9">
+					<div class="nav widget-type-menu custom-menu-primary">
+						<div class="cell-wrapper layout-widget-wrapper">
+            <span id="hs_cos_wrapper_module_1480706280274916" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_1480706280274916" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default">
+ <ul>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/what-we-do">What We Do</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/about-us">About Us</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/writing-jobs">Writing Jobs</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="/blog">Blog</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/contact">Contact</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/get-a-quote">Get a Quote</a></li>
+ </ul>
+</div></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- .container -->
+	</div> <!-- .mainNav -->
+</header>
