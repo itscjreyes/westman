@@ -3510,6 +3510,17 @@ form > div.hs_submit > div.actions > input {
   .hireWritersCTA .centerWrapper {
     padding-bottom: 0; }
 
+    .hireWritersCTA .fullButton {
+      font-size: 18px;
+      font-weight: 400;
+
+      &:hover,
+      &:focus {
+        background: white;
+        color: #443f45;
+      }
+    }
+
 /* ==========================================================================
    PARTIALS
    ========================================================================== */
@@ -3527,7 +3538,7 @@ form > div.hs_submit > div.actions > input {
 
 .mainNav .span9 {
   text-align: right;
-  padding-top: 15px; }
+  padding-top: 30px; }
 
 .mainNav .hs-menu-wrapper.hs-menu-flow-horizontal > ul li.hs-menu-depth-1 {
   padding-left: 40px;
@@ -4138,7 +4149,7 @@ ul.pagination {
 
 .textRight img,
 .textLeft img {
-  width: 90%; }
+  width: 70%; }
 
 .textLeft img {
   margin-left: 10%; }
@@ -4163,12 +4174,15 @@ ul.pagination {
   background-attachment: fixed;
   position: relative; }
   .whatWeDo .centerText .centerWrapper {
-    padding: 5% 0;
+    padding: 0;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+  width: 100%;
+max-width: 800px; }
     .whatWeDo .centerText .centerWrapper p {
       padding-bottom: 0;
-      font-size: 18px; }
+      font-size: 26px;
+    font-family: "Catamaran",sans-serif; }
   .whatWeDo .centerText:before {
     position: absolute;
     content: "";
@@ -4347,6 +4361,15 @@ ul.pagination {
     width: 98%; }
   .lpForm form > div > div.actions > input[type="submit"]:hover, .lpForm form > div > div.actions > input[type="submit"]:focus, .lpForm form > div.hs_submit > div.actions > input:hover, .lpForm form > div.hs_submit > div.actions > input:focus {
     cursor: pointer; }
+
+    .privacyPolicy .centerWrapper {
+      width: 100%;
+      text-align: left;
+    }
+
+    .privacyPolicy h2 {
+    text-align: center;
+}
 
 .error {
   background-image: url("https://cdn2.hubspot.net/hubfs/2759183/westman-error-bg.jpg");

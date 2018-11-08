@@ -11,7 +11,7 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body>
 
 <header>
 	<div class="topBar">
@@ -39,15 +39,15 @@
 					<div class="nav widget-type-menu custom-menu-primary">
 						<div class="cell-wrapper layout-widget-wrapper">
             <span id="hs_cos_wrapper_module_1480706280274916" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_1480706280274916" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default">
- <ul>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/what-we-do">What We Do</a></li>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/about-us">About Us</a></li>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/writing-jobs">Writing Jobs</a></li>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="/blog">Blog</a></li>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/contact">Contact</a></li>
-  <li class="hs-menu-item hs-menu-depth-1"><a href="//www.westmaneditorial.com/get-a-quote">Get a Quote</a></li>
- </ul>
-</div></span>
+			<ul>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/what-we-do">What We Do</a></li>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/about-us">About Us</a></li>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/writing-jobs">Writing Jobs</a></li>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/blog">Blog</a></li>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/contact">Contact</a></li>
+			<li class="hs-menu-item hs-menu-depth-1"><a href="/get-a-quote">Get a Quote</a></li>
+			</ul>
+			</div></span>
 						</div>
 					</div>
 				</div>
