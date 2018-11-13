@@ -34,7 +34,33 @@
 
 			<div class=" span4 latestPosts">
 				<h3>Latest Posts</h3>
-				
+				<ul>
+					<?php
+					$args = array(
+						'numberposts' => 3,
+						'offset' => 0,
+						'category' => 0,
+						'orderby' => 'post_date',
+						'order' => 'DESC',
+						'include' => '',
+						'exclude' => '',
+						'meta_key' => '',
+						'meta_value' =>'',
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'suppress_filters' => true
+					);
+
+					$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+					?>
+					<?php
+						$recent_posts = wp_get_recent_posts();
+						foreach( $recent_posts as $recent ){
+							echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+						}
+						wp_reset_query();
+					?>
+				</ul>
 			</div>
 
 		</div> <!-- .row-fluid -->
@@ -44,15 +70,6 @@
 		<p>© 2018. All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a></p>
 	</div>
 </footer>
-
-
-<!-- Main.js : all custom js -->
-
-<!-- Flickity -->
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-<!-- Odometer -->
-<script src="http://github.hubspot.com/odometer/odometer.js"></script>
 
 <?php wp_footer(); ?>
 </body>

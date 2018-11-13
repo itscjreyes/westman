@@ -78,6 +78,14 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
+  wp_register_script(
+	  'Flickity', 
+	  'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', 
+	  null, 
+	  null, 
+	  true );
+wp_enqueue_script('Flickity');
+
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source

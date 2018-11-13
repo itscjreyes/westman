@@ -21,11 +21,9 @@ app.navSearch = function () {
 
 app.accordion = function () {
 	if ($(window).width() < 767) {
-		console.log('mobile');
 
 		$('.accordionMobile').addClass('accordion');
 	} else {
-		console.log('desktop');
 		$('.accordionMobile').removeClass('accordion');
 	}
 
@@ -111,6 +109,5 @@ app.carousel = function () {
 };
 
 $(document).ready(function () {
-	console.log('hai');
 	app.init();
 });

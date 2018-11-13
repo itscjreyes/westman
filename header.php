@@ -10,8 +10,9 @@
   <?php wp_head(); ?>
 </head>
 
-
-<body>
+<?php if( get_field('body_class') ): ?> 
+<body class="<?php the_field('body_class'); ?>">
+<?php endif; ?>
 
 <header>
 	<div class="topBar">

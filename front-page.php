@@ -132,6 +132,89 @@
     </div> <!-- .container -->
 </div>
 
+<div class="testimonials">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span1"></div>
+            <div class="span3"><h2>Testimonials</h2></div>
+            <div class="span8">
+                <span id="hs_cos_wrapper_Testimonials">
+                    <?php
+                        if( have_rows('testimonials') ):
+                            while ( have_rows('testimonials') ) : the_row();
+
+                            $number = get_sub_field('number');
+                            $quote = get_sub_field('quote');
+                            $name = get_sub_field('name');
+                            $title = get_sub_field('title');
+
+                            ?>
+                            <div>
+                                <h3><?php echo $number; ?></h3>
+                                <div class="quote"><?php echo $quote; ?></div>
+                                <p class="quoteName"><?php echo $name; ?></p>
+                                <p class="quoteTitle"><?php echo $title; ?></p>
+                            </div>
+                            <?php  
+                            endwhile;
+                        else :
+                        endif;
+                        ?>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="latestPosts">
+    <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="row-fluid">
+            <?php
+            $args = array(
+                'numberposts' => 3,
+                'offset' => 0,
+                'category' => 0,
+                'orderby' => 'post_date',
+                'order' => 'DESC',
+                'include' => '',
+                'exclude' => '',
+                'meta_key' => '',
+                'meta_value' =>'',
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'suppress_filters' => true
+            );
+
+            $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+            ?>
+            <?php
+                $recent_posts = wp_get_recent_posts();
+                foreach( $recent_posts as $recent ){
+                    $post_thumbnail_id = get_post_thumbnail_id($recent["ID"]);
+                    $post_thumbnail_url = wp_get_attachment_thumb_url( $post_thumbnail_id );
+                    $date = get_the_date(d);
+                    $month = get_the_date(M);
+                    echo '<div class="span4"><a href="' . get_permalink($recent["ID"]) . '">
+                        <span class="postImg" style="background-image: url(\'' . $post_thumbnail_url . '\');">
+                            <div class="dateGroup">
+                                <p class="dateDay">' . $date . '</p>
+                                <p class="dateMonth">' . $month . '</p>
+                            </div>
+                        </span>
+                        <span class="postText">
+                            <h3 class="postTitle">' . $recent["post_title"] .'</h3>
+                            <p class="simpleAngleLink">Read More <i class="fa fa-angle-right"></i></p>
+                        </span>
+                    </a></div>';
+                }
+                wp_reset_query();
+            ?>
+        </div>
+        <a href="/blog" class="fullButton">View All</a>
+    </div>
+</div>
+
 <div class="hireWritersCTA">
     <div class="container">
         <div class="centerWrapper">
