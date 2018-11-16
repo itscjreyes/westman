@@ -3504,7 +3504,7 @@ form > div.hs_submit > div.actions > input {
   padding: 0 20px 0 15px; }
 
 .hireWritersCTA {
-  background: #a3dcd2; }
+  background: #a3dcd2 !important; }
   .hireWritersCTA .container {
     padding: 4% 8%; }
   .hireWritersCTA .centerWrapper {
@@ -3940,10 +3940,11 @@ span#hs_cos_wrapper_Testimonials {
   width: 66%;
   margin: auto; }
 
-.about .textTwo .span6:nth-child(2) .certificationIcon {
-  float: left;
-  height: 30px;
-  margin-right: 20px; }
+.certificationGroup li img {
+    vertical-align: middle;
+    margin: 10px 10px 10px 0;
+    height: 30px;
+}
 
 body.blog .newsletter {
   display: none; }
@@ -4155,7 +4156,7 @@ ul.pagination {
 .textLeft img {
   margin-left: 10%; }
 
-.hs_cos_wrapper_type_custom_widget:nth-child(odd) {
+main > section:nth-child(even) {
   background: #f8f8f8; }
 
 .whatWeDo .textRight img {
@@ -4175,15 +4176,14 @@ ul.pagination {
   background-attachment: fixed;
   position: relative; }
   .whatWeDo .centerText .centerWrapper {
-    padding: 0;
+    padding: 5% 0;
     position: relative;
     z-index: 1;
   width: 100%;
 max-width: 800px; }
     .whatWeDo .centerText .centerWrapper p {
       padding-bottom: 0;
-      font-size: 26px;
-    font-family: "Catamaran",sans-serif; }
+      font-size: 18px; }
   .whatWeDo .centerText:before {
     position: absolute;
     content: "";
@@ -4370,6 +4370,14 @@ max-width: 800px; }
 
     .privacyPolicy h2 {
     text-align: center;
+}
+.privacyPolicy ol, .privacyPolicy ul {
+    margin: 0;
+    padding: 10px 0 10px 20px;
+}
+.privacyPolicy .centerWrapper ul li {
+    list-style: disc;
+    padding-left: 1em;
 }
 
 .error {

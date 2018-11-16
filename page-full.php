@@ -12,6 +12,7 @@ get_header();  ?>
 	</div> <!-- .container -->
 </div>
 
+<main>
 <?php
 
 // check if the flexible content field has rows of data
@@ -22,7 +23,7 @@ if( have_rows('content') ):
 
         if( get_row_layout() == '2_block_text' ):
           ?>
-          <div class="textTwo">
+          <section class="textTwo">
             <div class="container">
               <div class="row-fluid">
                 <div class="span6">
@@ -33,13 +34,13 @@ if( have_rows('content') ):
                 </div>
               </div>
             </div>
-          </div>
+        </section>
 
           <?php
         elseif( get_row_layout() == '3_block_text' ): 
         ?>
 
-          <div class="textThree">
+          <section class="textThree">
             <div class="container">
               <div class="row-fluid">
                 <div class="span4">
@@ -53,12 +54,12 @@ if( have_rows('content') ):
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <?php
         elseif( get_row_layout() == 'right_text' ): 
         ?>
-          <div class="textRight">
+          <section class="textRight">
             <div class="container">
               <div class="row-fluid">
                 <div class="span6">
@@ -69,12 +70,12 @@ if( have_rows('content') ):
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <?php
         elseif( get_row_layout() == 'left_text' ): 
         ?>
-          <div class="textLeft">
+          <section class="textLeft">
             <div class="container">
               <div class="row-fluid">
                 <div class="span6">
@@ -85,30 +86,30 @@ if( have_rows('content') ):
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <?php
         elseif( get_row_layout() == 'center_text' ): 
         ?>
-          <div class="centerText">
+          <section class="centerText">
             <div class="container">
               <div class="centerWrapper">
                 <?php the_sub_field('center_text'); ?>
               </div> 
             </div>
-          </div>
+          </section>
 
           <?php
           elseif( get_row_layout() == 'banner_cta_text'):
             ?>
-            <div class="hireWritersCTA">
+            <section class="hireWritersCTA">
               <div class="container">
                   <div class="centerWrapper">
                       <?php the_sub_field('text'); ?>
                       <a href="/hire-writers" class="fullButton">Hire Writers</a>
                   </div>
               </div>
-          </div>
+          </section>
 
           <?php
         endif;
@@ -122,5 +123,6 @@ else :
 endif;
 
 ?>
+</main>
 
 <?php get_footer(); ?>
