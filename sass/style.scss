@@ -4393,6 +4393,25 @@ max-width: 800px; }
     padding-left: 1em;
 }
 
+.thankYou .centerWrapper a {
+  background: #443f45;
+  display: inline-block;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  -webkit-appearance: none;
+  text-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.thankYou .centerWrapper a:hover,
+.thankYou .centerWrapper a:focus {
+  color: #443f45;
+  background: #a3dcd2; }
+
 .error {
   background-image: url("https://cdn2.hubspot.net/hubfs/2759183/westman-error-bg.jpg");
   background-size: cover;
