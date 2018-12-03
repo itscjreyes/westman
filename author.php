@@ -1,42 +1,63 @@
 <?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
-    <div class="content">
-      <?php
-      	/* Queue the first post, that way we know who
-      	 * the author is when we try to get their name,
-      	 * URL, description, avatar, etc.
-      	 */
-      	if ( have_posts() )
-      		the_post();
-      ?>
+<div class="pageBanner">
+	<div class="container">
+		<h1>Blog</h1>
+	</div> <!-- .container -->
+</div>
 
-      <h1>Author Archives:
-        <a class="name" href="<?php echo get_author_posts_url( get_the_author_meta('ID') ); ?>">
-          <?php the_author(); ?>
-        </a>
-      </h1>
+<div class="container">
+  <div class="row-fluid">
 
-      <?php
-      	// If a user has filled out their description, show a bio on their entries.
-      	if ( get_the_author_meta('description') ) : ?>
+    <div class="span8">
+      <div class="blog-section">
+        <div class="post-listing">
+          <?php
+          // If a user has filled out their description, show a bio on their entries.
+          if ( get_the_author_meta('description') ) : ?>
 
-          <h2>About <?php the_author(); ?> </h2>
-      		<?php echo get_avatar( get_the_author_meta('user_email'), 60); ?>
-      		<?php the_author_meta('description'); ?>
+            <h2><?php the_author(); ?></h2>
+            <p><?php the_author_meta('description'); ?></p>
+            <br>
 
-        <?php endif; ?>
+          <?php endif; ?>
+          <div class="post-group">    		  
+            <?php 
+              if( have_posts() ) {
+                while( have_posts() ) {
+                  the_post();
+                ?>
+                <div class="post-item">
+                  <a href="<?php the_permalink(); ?>">
+                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                        <span class="postImg" style="background-image: url('<?php echo $image[0]; ?>')">
+                        </span>
+                      <?php endif; ?>
+                      <span class="postText">
+                        <p><?php the_date(); ?></p>
+                        <h3 class="postTitle"><?php the_title(); ?></h3>
+                        <p class="simpleAngleLink">Read More <i class="fa fa-angle-right"></i></p>
+                      </span>
+                  </a>
+                </div>
+                <?php 
+                }
+              }
+            ?>
+          </div>
+        </div>
+        <div class="blog-pagination">
+          <?php numeric_posts_nav(); ?>
+        </div>
+      </div>
+    </div>
+    
+    <div class="span4 sidebar">
+      <?php get_sidebar(); ?>
+    </div>
 
-      	<?php
-      		rewind_posts();
-      		get_template_part('loop', 'author');
-      	?>
-    </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
-
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+  </div>
+</div>
 
 <?php get_footer(); ?>
