@@ -3355,6 +3355,8 @@ input[type="submit"] {
 .breadcrumbs .hs-breadcrumb-menu-divider:before {
   display: none; }
 
+/* Forms */
+
 .visuallyHidden,
 .hs-form.stacked label,
 .hs-form label {
@@ -3386,16 +3388,27 @@ ul.hs-error-msgs.inputs-list > li > label {
 form .hs-richtext {
   font-family: "Roboto", sans-serif; }
 
-input.hs-input,
-textarea.hs-input {
+form.wpcf7-form input,
+form.wpcf7-form textarea {
+  font-size: 14px;
   background: white;
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 10px !important;
   font-family: "Roboto", sans-serif;
-  border: 1px solid #bcbcbc; }
+  border: 1px solid #bcbcbc;
+width: 100%; }
 
-textarea.hs-input {
+form.wpcf7-form input[type="checkbox"],
+form.wpcf7-form input[type="radio"] {
+  width: auto;
+}
+
+.wpcf7-form-control.wpcf7-checkbox > span {
+  display: block;
+}
+
+form.wpcf7-form textarea {
   resize: none;
   height: 100px !important;
   width: 99% !important; }
@@ -3407,14 +3420,12 @@ textarea.hs-input {
   .hs-form-checkbox label input {
     width: initial; }
 
-form > div > div.actions > input[type="submit"],
-form > div.hs_submit > div.actions > input {
+form.wpcf7-form input[type="submit"] {
   background: #443f45;
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 20px !important;
   text-transform: uppercase;
   color: white;
-  font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
   border: none !important;
@@ -3423,12 +3434,39 @@ form > div.hs_submit > div.actions > input {
   box-shadow: none !important;
   transition: all 0.2s ease;
   text-align: center;
-  -webkit-appearance: none; }
-  form > div > div.actions > input[type="submit"]:hover, form > div > div.actions > input[type="submit"]:focus,
-  form > div.hs_submit > div.actions > input:hover,
-  form > div.hs_submit > div.actions > input:focus {
+  -webkit-appearance: none;
+width: auto; }
+  form.wpcf7-form input[type="submit"]:hover, form.wpcf7-form> input[type="submit"]:focus {
     color: white;
-    background: #a3dcd2; }
+    background: #a3dcd2;
+  cursor: pointer; }
+
+  form.wpcf7-form input[type="file"] {
+    border: 0;
+    background: transparent;
+    width: auto;
+}
+
+form.wpcf7-form p {
+  padding: 10px 0 5px;
+}
+
+form.wpcf7-form .col2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+form.wpcf7-form .col2 > span {
+  width: calc(50% - 5px);  
+}
+
+input#es_txt_email {
+    padding: 10px;
+    width: 100%;
+}
+
+/* Flickity */
 
 .flickity-viewport {
   transition: all 0.3s ease; }

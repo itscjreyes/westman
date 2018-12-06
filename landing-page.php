@@ -30,6 +30,7 @@ get_header();  ?>
 				<div class="span4">
 					<div class="lpForm">
 						<h3><?php the_field('form_title'); ?></h3>
+						<?php the_field('form'); ?>
 					</div> <!-- .lpForm -->
 				</div> <!-- .span4 -->
 			</div> <!-- .row-fluid -->
