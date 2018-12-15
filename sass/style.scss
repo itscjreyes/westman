@@ -4032,20 +4032,22 @@ body.blog .newsletter {
   .post-item a:focus .simpleAngleLink .fa-angle-right {
     right: -20px; }
 
-ul.pagination {
+.blog-pagination ul {
   margin: 20px 2% 0; }
-  ul.pagination li {
+  .blog-pagination ul li {
     display: inline-block; }
-    ul.pagination li a {
+    .blog-pagination ul li a {
       display: inline-block;
       border: 1px solid #1c1c1c;
       width: 22px;
       height: 22px;
       text-align: center;
       padding: 5px; }
-      ul.pagination li a:hover {
-        background: #443f45;
-        border: 1px solid #443f45;
+      .blog-pagination ul li a:hover,
+      .blog-pagination ul li a:focus,
+      .blog-pagination ul li.active a {
+        background: #a3dcd2;
+        border: 1px solid #a3dcd2;
         color: white; }
 
 .sidebar h3 {
@@ -4134,7 +4136,11 @@ ul.pagination {
     text-transform: uppercase; }
 
 .post-header h2 {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-size: 34px;
+  border-bottom: 5px solid #a7dcd0;
+  margin-bottom: 20px;
+}
 
 .post-body .hs_cos_wrapper > p:first-child img {
   display: none; }
